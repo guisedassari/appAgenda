@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,6 +39,14 @@ public class ListaAlunoActivity extends AppCompatActivity {
         configuraFabNovoAluno();
 
         listaDeAlunos.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dao.todos()));
+
+        listaDeAlunos.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ListaAlunoActivity.this, "Aluno clicado", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void configuraFabNovoAluno() {
