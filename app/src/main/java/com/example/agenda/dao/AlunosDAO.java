@@ -8,9 +8,16 @@ import java.util.List;
 public class AlunosDAO {
 
     private final static List<Aluno> alunos = new ArrayList<>();
+    private static int contadorDeIds = 1;
 
     public void salva(Aluno aluno) {
+        aluno.setId(contadorDeIds);
         alunos.add(aluno);
+        contadorDeIds++;
+    }
+
+    public void edita(Aluno aluno) {
+        
     }
 
     public List<Aluno> todos() {
