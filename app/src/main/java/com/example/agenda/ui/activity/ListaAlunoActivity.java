@@ -17,10 +17,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
+import static com.example.agenda.ui.activity.ConstantesActivities.CHAVE_ALUNO;
+
 public class ListaAlunoActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Lista de Alunos";
-    public static final String CHEVE_ALUNO = "aluno";
+
     private final AlunosDAO dao = new AlunosDAO();
 
     @Override
@@ -60,7 +62,7 @@ public class ListaAlunoActivity extends AppCompatActivity {
 
     private void abreFormularioModoEditaAluno(Aluno aluno) {
         Intent vaiParaFormularioActivity = new Intent(ListaAlunoActivity.this, FormularioAlunoActivity.class);
-        vaiParaFormularioActivity.putExtra(CHEVE_ALUNO, aluno);
+        vaiParaFormularioActivity.putExtra(CHAVE_ALUNO, aluno);
         startActivity(vaiParaFormularioActivity);
     }
 
