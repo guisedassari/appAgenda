@@ -97,6 +97,3 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         finish();
     }
 }
-
-
-
